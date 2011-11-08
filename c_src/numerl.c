@@ -22,66 +22,39 @@
 
 #include "matrix.h"
 
-ERL_NIF_TERM
-matrix_identity(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
+static int
+load(ErlNifEnv* env, void** priv, ERL_NIF_TERM info)
 {
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
+    return 0;
 }
 
-ERL_NIF_TERM
-matrix_ones(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
+static int
+reload(ErlNifEnv* env, void** priv, ERL_NIF_TERM info)
 {
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
+    return 0;
 }
 
-ERL_NIF_TERM
-matrix_zeros(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
+static int
+upgrade(ErlNifEnv* env, void** priv, void** old_priv, ERL_NIF_TERM info)
 {
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
+    return 0;
 }
 
-ERL_NIF_TERM
-matrix_transpose(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
+static void
+unload(ErlNifEnv* env, void* priv)
 {
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
+    return;
 }
 
-ERL_NIF_TERM
-matrix_multiply(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
+static ErlNifFunc funcs[] =
 {
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
-}
+    {"identity", 1, matrix_identity},
+    {"zeros", 1, matrix_zeros},
+    {"ones", 1, matrix_ones},
+    {"transpose", 1, matrix_transpose},
+    {"multiply", 2, matrix_multiply},
+    {"to_lists", 1, matrix_to_lists},
+    {"to_tuples", 1, matrix_to_tuples}
+};
 
-ERL_NIF_TERM
-matrix_to_lists(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
-{
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
-}
-
-ERL_NIF_TERM
-matrix_to_tuples(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
-{
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
-}
-
+ERL_NIF_INIT(matrix, funcs, &load, &reload, &upgrade, &unload);

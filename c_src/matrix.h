@@ -20,68 +20,12 @@
  * THE SOFTWARE.
  */
 
-#include "matrix.h"
+#include "erl_nif.h"
 
-ERL_NIF_TERM
-matrix_identity(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
-{
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
-}
-
-ERL_NIF_TERM
-matrix_ones(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
-{
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
-}
-
-ERL_NIF_TERM
-matrix_zeros(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
-{
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
-}
-
-ERL_NIF_TERM
-matrix_transpose(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
-{
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
-}
-
-ERL_NIF_TERM
-matrix_multiply(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
-{
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
-}
-
-ERL_NIF_TERM
-matrix_to_lists(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
-{
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
-}
-
-ERL_NIF_TERM
-matrix_to_tuples(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
-{
-    ERL_NIF_TERM ret;
-    ErlNifBinary *matrix;
-    
-    return ret;
-}
-
+ERL_NIF_TERM matrix_identity(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]);
+ERL_NIF_TERM matrix_ones(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]);
+ERL_NIF_TERM matrix_zeros(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]);
+ERL_NIF_TERM matrix_multiply(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]);
+ERL_NIF_TERM matrix_transpose(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]);
+ERL_NIF_TERM matrix_to_lists(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]);
+ERL_NIF_TERM matrix_to_tuples(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[]);
