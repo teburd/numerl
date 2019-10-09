@@ -3,6 +3,8 @@ Numerical Erlang
 
 Efficient matrix math in erlang in the same spirit as NumPy.
 
+**NOTE** This repo is here for purely historical reasons, no further work has been done for a *long* time.
+
 Example Usage 
 -------------
 
